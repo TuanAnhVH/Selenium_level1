@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test thread-count="5" name="SeleniumLevel1(failed)">
+    <classes>
+      <class name="Railway.BookingTest">
+        <methods>
+          <include name="TC14"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- Railway.BookingTest -->
+    </classes>
+  </test> <!-- SeleniumLevel1(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
