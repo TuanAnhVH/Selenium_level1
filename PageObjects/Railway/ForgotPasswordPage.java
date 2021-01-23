@@ -26,7 +26,7 @@ public class ForgotPasswordPage extends GeneralPage {
     //Methods
     public void resetPassword(String email) {
         CommonActions.enterDataToTextbox(getTxtEmail(), email);
-        getbtnSend().click();
+        getbtnSend().submit();
     }
 
 }

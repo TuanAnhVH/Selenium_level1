@@ -24,6 +24,6 @@ public class BookingTest extends TestBase {
     public void TC14() {
         System.out.println("TC14 - User can't book more than 10 tickets");
         homePage.gotoBookTicketPage();
-        bookTicketPage.bookTicket("1/27/2021","Phan Thiết", "Nha Trang", "Soft seat", 2);
+        bookTicketPage.bookTicket("1/29/2021","Huế", "Nha Trang", "Soft seat", 10);
     }
 }

@@ -13,7 +13,7 @@ public class BookTicketPage extends GeneralPage {
     protected final By _cbbArriveAT = By.name("ArriveStation");
     protected final By _cbbSeatType = By.name("SeatType");
     protected final By _cbbTicketAmount = By.name("TicketAmount");
-    protected final By _btnBookTicket = By.xpath("//input[@type='submit']");
+    protected final By _btnBookTicket = By.xpath("//input[@value='Book ticket']");
 
     //Elements
     protected Select getCbbDepartDate() {
@@ -47,7 +47,8 @@ public class BookTicketPage extends GeneralPage {
         getCbbArriveAT().selectByVisibleText(arriveAt);
         getCbbSeatType().selectByVisibleText(seatType);
         getCbbTicketAmount().selectByValue(ticketAmount+"");
-        getBtnBookTicket().click();
+        getBtnBookTicket().submit();
+//        getBtnBookTicket().click();
      }
 
 }

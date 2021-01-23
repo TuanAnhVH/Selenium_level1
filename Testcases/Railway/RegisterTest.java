@@ -16,7 +16,7 @@ public class RegisterTest extends TestBase {
         System.out.println("TC07 - User can create new account");
 
         homePage.gotoRegisterPage();
-        String email = CommonActions.curentTime()+"e@gmail.com";
+        String email = CommonActions.getRandomEmail();
         registerPage.register(email, Constant.PASSWORD, Constant.PASSWORD, Constant.PID);
 
         String expectedMsg = "Registration Confirmed! You can now log in to the site.";
@@ -29,8 +29,7 @@ public class RegisterTest extends TestBase {
         CommonActions.navigateToRailway();
 
         homePage.gotoRegisterPage();
-        String email = CommonActions.curentTime()+"e@gmail.com";
-
+        String email = CommonActions.getRandomEmail();
         registerPage.register(email, "", "", "");
 
         String expectedMsg = "There're errors in the form. Please correct the errors and try again.";

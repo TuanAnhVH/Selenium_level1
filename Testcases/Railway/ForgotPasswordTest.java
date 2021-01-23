@@ -23,7 +23,7 @@ public class ForgotPasswordTest extends TestBase {
 
         loginPage.gotoForgotPasswordPage();
 
-        String email = CommonActions.curentTime()+"e@gmail.com";
+        String email = CommonActions.getRandomEmail();
         forgotPasswordPage.resetPassword(email);
 
         String expectedMsg = "This email address doesn't exist.";

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Calendar;
 
@@ -51,14 +52,8 @@ public class CommonActions {
         element.sendKeys(content);
     }
 
-    public static String curentTime(){
-        Calendar calendar = Calendar.getInstance();
-        String year = calendar.get(Calendar.YEAR)+"";
-        String month = calendar.get(Calendar.MONTH)+"";;
-        String date = calendar.get(Calendar.DATE)+"";;
-        String hour = calendar.get(Calendar.HOUR)+"";
-        String minute = calendar.get(Calendar.MINUTE)+"";
-        String second = calendar.get(Calendar.SECOND)+"";
-        return year+month+date+hour+minute+second;
+    public static String getRandomEmail(){
+        String time = new SimpleDateFormat("yyyyMMddHHmmss").format(Calendar.getInstance().getTime());
+        return time+"e@gmail.com";
     }
 }
