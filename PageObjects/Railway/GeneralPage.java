@@ -8,17 +8,22 @@ public class GeneralPage {
     //locators
 
     protected final By tabContact = By.xpath("//div[@id='menu']//a[@href='/Page/Contact.cshtml']");
+    protected final By tabTicketPrice = By.xpath("//div[@id='menu']//a[@href='/Page/TrainPriceListPage.cshtml']");
     protected final By tabBookTicket = By.xpath("//div[@id='menu']//a[@href='/Page/BookTicketPage.cshtml']");
-    protected final By tabLogout = By.xpath("//div[@id='menu']//a[@href='/Account/Logout']");
     protected final By tabMyTicket = By.xpath("//div[@id='menu']//a[@href='/Page/ManageTicket.cshtml']");
     protected final By tabRegister = By.xpath("//div[@id='menu']//a[@href='/Account/Register.cshtml']");
     protected final By tabChangePassword = By.xpath("//div[@id='menu']//a[@href='/Account/ChangePassword.cshtml']");
     protected final By tabLogin = By.xpath("//div[@id='menu']//a[@href='/Account/Login.cshtml']");
+    protected final By tabLogout = By.xpath("//div[@id='menu']//a[@href='/Account/Logout']");
     protected final By lblWelcomeMessage = By.xpath("//div[@class='account']/strong");
 
     //Elements
     protected WebElement getTabContact() {
         return CommonActions.getElement(tabContact);
+    }
+
+    protected WebElement getTabTicketPrice() {
+        return CommonActions.getElement(tabTicketPrice);
     }
 
     protected WebElement getTabBookTicket() {
@@ -54,6 +59,8 @@ public class GeneralPage {
     public void gotoContactPage() {
         this.getTabContact().click();
     }
+
+    public void gotoTicketPricePage() { this.getTabTicketPrice().click(); }
 
     public void gotoBookTicketPage() {
         this.getTabBookTicket().click();
