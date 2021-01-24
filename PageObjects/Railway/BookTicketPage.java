@@ -6,30 +6,33 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.concurrent.TimeUnit;
+
 public class BookTicketPage extends GeneralPage {
 
-    protected final By _cbbDepartDate = By.name("Date");
-    protected final By _cbbDepartFrom = By.name("DepartStation");
-    protected final By _cbbArriveAT = By.name("ArriveStation");
-    protected final By _cbbSeatType = By.name("SeatType");
-    protected final By _cbbTicketAmount = By.name("TicketAmount");
-    protected final By _btnBookTicket = By.xpath("//input[@value='Book ticket']");
+    public final By _cbbDepartDate = By.name("Date");
+    public final By _cbbDepartFrom = By.name("DepartStation");
+    public final By _cbbArriveAT = By.name("ArriveStation");
+    public final By _cbbSeatType = By.name("SeatType");
+    public final By _cbbTicketAmount = By.name("TicketAmount");
+    public final By _btnBookTicket = By.xpath("//input[@value='Book ticket']");
+    public final By _lblBookingError = By.xpath("//p[@class='message error']");
+    public final By _lblTicketAmountError = By.xpath("//select[@name='TicketAmount']//following-sibling::label");
 
     //Elements
-    protected Select getCbbDepartDate() {
+    public Select getCbbDepartDate() {
         return  new Select(CommonActions.getElement(_cbbDepartDate));
     }
 
-    protected Select getCbbDepartFrom() {
+    public Select getCbbDepartFrom() {
         return new Select(CommonActions.getElement(_cbbDepartFrom));
     }
 
-    protected Select getCbbArriveAT() {
+    public Select getCbbArriveAT() {
         return new Select(CommonActions.getElement(_cbbArriveAT));
     }
 
-    protected Select getCbbSeatType() {
-        return new Select(CommonActions.getElement(_cbbSeatType));
+    public Select getCbbSeatType() { return new Select(CommonActions.getElement(_cbbSeatType));
     }
 
     protected Select getCbbTicketAmount() {
@@ -41,10 +44,15 @@ public class BookTicketPage extends GeneralPage {
     }
 
     //methods
-     public void bookTicket(String departDate, String departFrom, String arriveAt, String seatType, int ticketAmount){
+     public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, int ticketAmount){
         getCbbDepartDate().selectByVisibleText(departDate);
-        getCbbDepartFrom().selectByVisibleText(departFrom);
-        getCbbArriveAT().selectByVisibleText(arriveAt);
+        getCbbDepartFrom().selectByVisibleText(departStation);
+         try {
+             Thread.sleep(1000);
+         } catch (InterruptedException e) {
+             System.out.println(e);
+         }
+        getCbbArriveAT().selectByVisibleText(arriveStation);
         getCbbSeatType().selectByVisibleText(seatType);
         getCbbTicketAmount().selectByValue(ticketAmount+"");
         getBtnBookTicket().submit();

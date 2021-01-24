@@ -42,6 +42,11 @@ public class CommonActions {
         Assert.assertTrue(Constant.WEBDRIVER.findElement(locator).isDisplayed(),message);
     }
 
+    public static void checkControlNotExist(By locator,String message) {
+        waiForControl(locator);
+        Assert.assertFalse(Constant.WEBDRIVER.findElement(locator).isDisplayed(),message);
+    }
+
     public static void checkMessageDisplays(By locator, String expectedMessage){
         String actualMsg = getElement(locator).getText();
         Assert.assertEquals(actualMsg, expectedMessage);
