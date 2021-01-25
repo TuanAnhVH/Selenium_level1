@@ -13,6 +13,7 @@ import org.testng.Assert;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
 
 public class CommonActions {
 
@@ -37,14 +38,11 @@ public class CommonActions {
         return Constant.WEBDRIVER.findElement(locator);
     }
 
-    public static void checkControlExist(By locator,String message) {
-        waiForControl(locator);
-        Assert.assertTrue(Constant.WEBDRIVER.findElement(locator).isDisplayed(),message);
-    }
-
-    public static void checkControlNotExist(By locator,String message) {
-        waiForControl(locator);
-        Assert.assertFalse(Constant.WEBDRIVER.findElement(locator).isDisplayed(),message);
+    public static boolean doesControlExist(By locator) {
+        if(Constant.WEBDRIVER.findElements(locator).isEmpty())
+            return false;
+        else
+            return true;
     }
 
     public static void checkMessageDisplays(By locator, String expectedMessage){

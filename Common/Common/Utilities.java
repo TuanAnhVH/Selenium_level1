@@ -12,8 +12,7 @@ import org.testng.Assert;
 
 public class Utilities {
     public static void setProperty(String driverLocate) {
-        String path= System.getProperty("user.dir")+driverLocate;
-        System.setProperty("webdriver.chrome.driver", path);
+
     }
 
     public static void maximizeBrowser()
@@ -22,14 +21,17 @@ public class Utilities {
     }
 
     public static void setupBrowser(String browser){
+        String path;
         switch (browser) {
             case "Chrome":
-                setProperty(Constant.chromeDriverLocate);
+                path= System.getProperty("user.dir")+Constant.CHROME_DRIVER_LOCATE;
+                System.setProperty("webdriver.chrome.driver", path);
                 Constant.WEBDRIVER = new ChromeDriver();
                 break;
             case "FireFox":
-                setProperty(Constant.geckoDriverLocate);
-                Constant.WEBDRIVER = new ChromeDriver();
+                path= System.getProperty("user.dir")+Constant.GECKO_DRIVER_LOCATE;
+                System.setProperty("webdriver.gecko.driver", path);
+                Constant.WEBDRIVER = new FirefoxDriver();
                 break;
         }
     }

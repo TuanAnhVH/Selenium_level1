@@ -3,6 +3,7 @@ package Railway;
 import Common.CommonActions;
 import Constant.Constant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class TicketPricePage extends GeneralPage{
@@ -15,6 +16,7 @@ public class TicketPricePage extends GeneralPage{
 
     //Methods
     public void bookTicket(String seatType){
-        getBtnBookTicket(seatType).click();
+        JavascriptExecutor executor = (JavascriptExecutor)Constant.WEBDRIVER;
+        executor.executeScript("arguments[0].click();", getBtnBookTicket(seatType));
     }
 }

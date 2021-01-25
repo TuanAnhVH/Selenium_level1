@@ -47,16 +47,16 @@ public class BookTicketPage extends GeneralPage {
      public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, int ticketAmount){
         getCbbDepartDate().selectByVisibleText(departDate);
         getCbbDepartFrom().selectByVisibleText(departStation);
-         try {
-             Thread.sleep(1000);
-         } catch (InterruptedException e) {
-             System.out.println(e);
-         }
-        getCbbArriveAT().selectByVisibleText(arriveStation);
         getCbbSeatType().selectByVisibleText(seatType);
         getCbbTicketAmount().selectByValue(ticketAmount+"");
-        getBtnBookTicket().submit();
-//        getBtnBookTicket().click();
+        getCbbArriveAT().selectByVisibleText(arriveStation);
+        getBtnBookTicket().click();
+     }
+
+     public String getSelectedItem(String selectName){
+        String path = String.format("//select[@name='%s']//option[@selected='selected']",selectName);
+        By selectedItem = By.xpath(path);
+        return CommonActions.getElement(selectedItem).getText();
      }
 
 }
