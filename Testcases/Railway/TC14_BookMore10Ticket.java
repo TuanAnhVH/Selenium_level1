@@ -2,6 +2,8 @@ package Railway;
 
 import Common.CommonActions;
 import Constant.Constant;
+import JsonObject.DPClass;
+import JsonObject.Ticket;
 import org.testng.annotations.Test;
 import testbase.TestBase;
 
@@ -10,8 +12,8 @@ public class TC14_BookMore10Ticket extends TestBase {
     LoginPage loginPage = new LoginPage();
     BookTicketPage bookTicketPage = new BookTicketPage();
 
-    @Test
-    public void TC14() {
+    @Test(dataProvider = "Ticket",dataProviderClass = DPClass.class)
+    public void TC14(Ticket ticket) {
         System.out.println("TC14 - User can't book more than 10 tickets");
 
         System.out.println("Go to 'Login' page.");
@@ -24,12 +26,12 @@ public class TC14_BookMore10Ticket extends TestBase {
         homePage.gotoBookTicketPage();
 
         System.out.println("Book 10 tickets.");
-        bookTicketPage.bookTicket("1/29/2021","Huế", "Nha Trang", "Soft seat", 10);
+        bookTicketPage.bookTicket(ticket.departDate,ticket.departStation, ticket.arriveStation, ticket.seatType, 10);
 
         homePage.gotoBookTicketPage();
 
         System.out.println("Book more tickets.");
-        bookTicketPage.bookTicket("1/29/2021","Huế", "Nha Trang", "Soft seat", 1);
+        bookTicketPage.bookTicket(ticket.departDate,ticket.departStation, ticket.arriveStation, ticket.seatType, 1);
 
         System.out.println("Check the Book ticket message displays.");
         String expectedMsg = "There're errors in the form. Please correct the errors and try again.";

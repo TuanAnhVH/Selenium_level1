@@ -50,7 +50,7 @@ public class BookTicketPage extends GeneralPage {
         getCbbSeatType().selectByVisibleText(seatType);
         getCbbTicketAmount().selectByValue(ticketAmount+"");
         getCbbArriveAT().selectByVisibleText(arriveStation);
-        getBtnBookTicket().click();
+        getBtnBookTicket().submit();
      }
 
      public String getSelectedItem(String selectName){

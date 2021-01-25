@@ -1,19 +1,14 @@
 package Common;
 
 import Constant.Constant;
-import Railway.HomePage;
-import Railway.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalTime;
 import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
 
 public class CommonActions {
 
@@ -59,4 +54,5 @@ public class CommonActions {
         String time = new SimpleDateFormat("yyyyMMddHHmmss").format(Calendar.getInstance().getTime());
         return time+"e@gmail.com";
     }
+
 }
