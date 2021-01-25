@@ -43,7 +43,7 @@ public class RegisterPage {
         CommonActions.enterDataToTextbox(getTxtPassword(), password);
         CommonActions.enterDataToTextbox(getTxtConfirmPassword(), confirmPassword);
         CommonActions.enterDataToTextbox(getTxtPID(), pidNumber);
-        getBtnRegister().click();
+        getBtnRegister().submit();
     }
 
 }

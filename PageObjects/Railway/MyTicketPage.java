@@ -1,7 +1,9 @@
 package Railway;
 
 import Common.CommonActions;
+import Constant.Constant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class MyTicketPage {
@@ -17,11 +19,11 @@ public class MyTicketPage {
        return CommonActions.getElement(_btnCancel(departStation, arriveStation));
     }
 
-
     //Methods
 
     public void cancelTicket(String departStation,String arriveStation){
-        getBtnCancel(departStation,arriveStation).click();
+        JavascriptExecutor executor = (JavascriptExecutor) Constant.WEBDRIVER;
+        executor.executeScript("arguments[0].click();",getBtnCancel(departStation,arriveStation));
     }
 
 }

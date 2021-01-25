@@ -15,6 +15,6 @@ public class Constant {
     public static final String PASSWORD = "12345678";
     public static final String PID = "12345678";
     public static final int TIME_WAIT_CONTROL = 5;
-    public static final String chromeDriverLocate = "\\Executables\\chromeDriver.exe";
-    public static final String geckoDriverLocate = "\\Executables\\geckodriver.exe";
+    public static final String CHROME_DRIVER_LOCATE = "\\Executables\\chromeDriver.exe";
+    public static final String GECKO_DRIVER_LOCATE = "\\Executables\\geckodriver.exe";
 }

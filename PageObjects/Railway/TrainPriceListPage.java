@@ -1,7 +1,9 @@
 package Railway;
 
 import Common.CommonActions;
+import Constant.Constant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class TrainPriceListPage {
@@ -14,7 +16,7 @@ public class TrainPriceListPage {
 
     //Methods
     public void checkPrice(String departStation, String arriveStation){
-        getBtnCheckPrice(departStation, arriveStation).click();
-
+        JavascriptExecutor executor = (JavascriptExecutor) Constant.WEBDRIVER;
+        executor.executeScript("arguments[0].click();", getBtnCheckPrice(departStation, arriveStation));
     }
 }

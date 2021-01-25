@@ -6,9 +6,11 @@ import Constant.Constant;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 
 public class TestBase extends Utilities {
-    @BeforeClass
+    @BeforeClass()
     public void beforeClass()
     {
         System.out.println("Pre-condition");
