@@ -1,0 +1,58 @@
+{
+  "TC02": [{
+    "expectedMessage": "There was a problem with your login and/or errors exist in your form."
+  }],
+
+  "TC03": [{
+    "expectedMessage": "Invalid username or password. Please try again."
+  }],
+
+  "TC04": [{
+    "expectedHref": "mailto:thanh.viet.le@logigear.com"
+  }],
+
+  "TC05": [{
+    "expectedMessage": "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes."
+  }],
+
+  "TC07": [{
+    "expectedMessage": "Registration Confirmed! You can now log in to the site."
+  }],
+
+  "TC08": [{
+    "expectedMessage": "Invalid username or password. Please try again."
+  }],
+
+  "TC10": [{
+    "expectedMessage": "This email address doesn't exist."
+  }],
+  "TC11": [{
+    "expectedRegisterMessage": "There're errors in the form. Please correct the errors and try again.",
+    "expectedPasswordMessage": "Invalid password length",
+    "expectedPIDMessage": "Invalid ID length"
+  }],
+
+  "TC14": [{
+    "departDate": "1/31/2021",
+    "departStation": "Huế",
+    "arriveStation": "Nha Trang",
+    "seatType": "Soft seat",
+    "ticketAmount": "1",
+    "expectedBookingMessage": "There're errors in the form. Please correct the errors and try again.",
+    "expectedTicketAmountMessage": "There're errors in the form. Please correct the errors and try again."
+  }],
+
+  "TC15": [{
+    "departStation": "Huế",
+    "arriveStation": "Nha Trang",
+    "seatType": "Soft seat"
+  }],
+
+  "TC16": [{
+    "departDate": "1/31/2021",
+    "departStation": "Huế",
+    "arriveStation": "Nha Trang",
+    "seatType": "Soft seat",
+    "ticketAmount": "1"
+  }]
+}
