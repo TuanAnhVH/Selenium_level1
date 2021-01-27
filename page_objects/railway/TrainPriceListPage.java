@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 public class TrainPriceListPage {
 
     //Elements
-    protected WebElement getBtnCheckPrice(String departStation, String arriveStation){
-        String path= String.format("//li[text()='%s to %s']//ancestor::tr//a[@class='BoxLink']",departStation,arriveStation);
+    protected WebElement getBtnCheckPrice(String departStation, String arriveStation) {
+        String path = String.format("//li[text()='%s to %s']//ancestor::tr//a[@class='BoxLink']", departStation, arriveStation);
         return CommonActions.getElement(By.xpath(path));
     }
 
     //Methods
-    public void checkPrice(String departStation, String arriveStation){
+    public void checkPrice(String departStation, String arriveStation) {
         CommonActions.clickOnElement(getBtnCheckPrice(departStation, arriveStation));
     }
 }

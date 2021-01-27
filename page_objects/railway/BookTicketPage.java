@@ -2,59 +2,60 @@ package railway;
 
 import common.CommonActions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class BookTicketPage extends GeneralPage {
 
-    public final By _cbbDepartDate = By.name("Date");
-    public final By _cbbDepartFrom = By.name("DepartStation");
-    public final By _cbbArriveAT = By.name("ArriveStation");
-    public final By _cbbSeatType = By.name("SeatType");
-    public final By _cbbTicketAmount = By.name("TicketAmount");
-    public final By _btnBookTicket = By.xpath("//input[@value='Book ticket']");
-    public final By _lblBookingError = By.xpath("//p[@class='message error']");
-    public final By _lblTicketAmountError = By.xpath("//select[@name='TicketAmount']//following-sibling::label");
+    public final By lblBookingError = By.xpath("//p[@class='message error']");
+    public final By lblTicketAmountError = By.xpath("//select[@name='TicketAmount']//following-sibling::label");
+    protected final By cbbDepartDate = By.name("Date");
+    protected final By cbbDepartFrom = By.name("DepartStation");
+    protected final By cbbArriveAT = By.name("ArriveStation");
+    protected final By cbbSeatType = By.name("SeatType");
+    protected final By cbbTicketAmount = By.name("TicketAmount");
+    protected final By btnBookTicket = By.xpath("//input[@value='Book ticket']");
 
     //Elements
-    public Select getCbbDepartDate() {
-        return  new Select(CommonActions.getElement(_cbbDepartDate));
+    protected Select getCbbDepartDate() {
+        return new Select(CommonActions.getElement(cbbDepartDate));
     }
 
-    public Select getCbbDepartFrom() {
-        return new Select(CommonActions.getElement(_cbbDepartFrom));
+    protected Select getCbbDepartFrom() {
+        return new Select(CommonActions.getElement(cbbDepartFrom));
     }
 
-    public Select getCbbArriveAT() {
-        return new Select(CommonActions.getElement(_cbbArriveAT));
+    protected Select getCbbArriveAT() {
+        return new Select(CommonActions.getElement(cbbArriveAT));
     }
 
-    public Select getCbbSeatType() { return new Select(CommonActions.getElement(_cbbSeatType));
+    protected Select getCbbSeatType() {
+        return new Select(CommonActions.getElement(cbbSeatType));
     }
 
     protected Select getCbbTicketAmount() {
-        return new Select(CommonActions.getElement(_cbbTicketAmount));
+        return new Select(CommonActions.getElement(cbbTicketAmount));
     }
 
     protected WebElement getBtnBookTicket() {
-        return CommonActions.getElement(_btnBookTicket);
+        return CommonActions.getElement(btnBookTicket);
     }
 
     //methods
-     public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, int ticketAmount){
+    public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
         getCbbDepartDate().selectByVisibleText(departDate);
         getCbbDepartFrom().selectByVisibleText(departStation);
-        getCbbSeatType().selectByVisibleText(seatType);
-        getCbbTicketAmount().selectByValue(ticketAmount+"");
+        CommonActions.waitForPage();
         getCbbArriveAT().selectByVisibleText(arriveStation);
+        getCbbSeatType().selectByVisibleText(seatType);
+        getCbbTicketAmount().selectByValue(ticketAmount);
         getBtnBookTicket().click();
-     }
+    }
 
-     public String getSelectedItem(String selectName){
-        String path = String.format("//select[@name='%s']//option[@selected='selected']",selectName);
+    public String getSelectedItem(String selectName) {
+        String path = String.format("//select[@name='%s']//option[@selected='selected']", selectName);
         By selectedItem = By.xpath(path);
         return CommonActions.getElement(selectedItem).getText();
-     }
+    }
 
 }

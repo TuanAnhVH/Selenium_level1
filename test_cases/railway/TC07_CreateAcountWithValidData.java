@@ -1,16 +1,19 @@
 package railway;
 
 import common.CommonActions;
+import common.DataProviders;
 import constant.Constant;
 import org.testng.annotations.Test;
 import testbase.TestBase;
+
+import java.util.Hashtable;
 
 public class TC07_CreateAcountWithValidData extends TestBase {
     private final HomePage homePage = new HomePage();
     private final RegisterPage registerPage = new RegisterPage();
 
-    @Test
-    public void TC07() {
+    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    public void TC07(Hashtable<String, String> data) {
         System.out.println("TC07 - User can create new account");
 
         System.out.println("Go to 'Register' page.");
@@ -21,7 +24,6 @@ public class TC07_CreateAcountWithValidData extends TestBase {
         registerPage.register(email, Constant.PASSWORD, Constant.PASSWORD, Constant.PID);
 
         System.out.println("Check the register message displays.");
-        String expectedMsg = "Registration Confirmed! You can now log in to the site.";
-        CommonActions.checkMessageDisplays(registerPage._lblRegisterSuccessMsg, expectedMsg);
+        CommonActions.checkMessageDisplays(registerPage.lblRegisterSuccessMsg, data.get("expectedMessage"));
     }
 }

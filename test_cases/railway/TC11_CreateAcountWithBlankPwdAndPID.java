@@ -1,14 +1,18 @@
 package railway;
 
 import common.CommonActions;
+import common.DataProviders;
 import org.testng.annotations.Test;
 import testbase.TestBase;
+
+import java.util.Hashtable;
 
 public class TC11_CreateAcountWithBlankPwdAndPID extends TestBase {
     private final HomePage homePage = new HomePage();
     private final RegisterPage registerPage = new RegisterPage();
-    @Test
-    public void TC011() {
+
+    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    public void TC11(Hashtable<String, String> data) {
         System.out.println("TC11 - User can't create account while password and PID fields are empty");
         CommonActions.navigateToRailway();
 
@@ -20,15 +24,12 @@ public class TC11_CreateAcountWithBlankPwdAndPID extends TestBase {
         registerPage.register(email, "", "", "");
 
         System.out.println("Check the register message displays.");
-        String expectedMsg = "There're errors in the form. Please correct the errors and try again.";
-        CommonActions.checkMessageDisplays(registerPage._lblRegisterErrorMsg, expectedMsg);
+        CommonActions.checkMessageDisplays(registerPage.lblRegisterErrorMsg, data.get("expectedRegisterMessage"));
 
         System.out.println("Check the error password message displays.");
-        expectedMsg = "Invalid password length";
-        CommonActions.checkMessageDisplays(registerPage._lblPasswordError, expectedMsg);
+        CommonActions.checkMessageDisplays(registerPage.lblPasswordError, data.get("expectedPasswordMessage"));
 
         System.out.println("Check the error PID message displays.");
-        expectedMsg = "Invalid ID length";
-        CommonActions.checkMessageDisplays(registerPage._lblPIDError, expectedMsg);
+        CommonActions.checkMessageDisplays(registerPage.lblPIDError, data.get("expectedPIDMessage"));
     }
 }

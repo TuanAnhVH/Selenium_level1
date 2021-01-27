@@ -1,16 +1,19 @@
 package railway;
 
 import common.CommonActions;
+import common.DataProviders;
 import org.testng.annotations.Test;
 import testbase.TestBase;
+
+import java.util.Hashtable;
 
 public class TC10_ResetPasswordWithIncorrectEmail extends TestBase {
     private HomePage homePage = new HomePage();
     private LoginPage loginPage = new LoginPage();
     private ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage();
 
-    @Test
-    public void TC10() {
+    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    public void TC10(Hashtable<String, String> data) {
         System.out.println("TC10 - User can't reset password if enter incorrect email address");
         CommonActions.navigateToRailway();
 
@@ -25,7 +28,6 @@ public class TC10_ResetPasswordWithIncorrectEmail extends TestBase {
         forgotPasswordPage.resetPassword(email);
 
         System.out.println("Check the error message.");
-        String expectedMsg = "This email address doesn't exist.";
-        CommonActions.checkMessageDisplays(forgotPasswordPage._lblErrorMsg,expectedMsg);
+        CommonActions.checkMessageDisplays(forgotPasswordPage.lblErrorMsg, data.get("expectedMessage"));
     }
 }

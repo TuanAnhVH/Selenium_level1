@@ -6,35 +6,35 @@ import org.openqa.selenium.WebElement;
 
 public class RegisterPage {
     //Locators
-    protected final By _txtEmail = By.id("email");
-    protected final By _txtPassword = By.id("password");
-    protected final By _txtConfirmPassword = By.id("confirmPassword");
-    protected final By _txtPID = By.id("pid");
-    protected final By _btnRegister = By.xpath("//input[@value='Register']");
-    protected final By _lblRegisterSuccessMsg = By.xpath("//*[@id='content']/p");
-    protected final By _lblRegisterErrorMsg = By.xpath("//p[@class='message error']");
-    protected final By _lblPasswordError = By.xpath("//label[@for='password' and @class='validation-error']");
-    protected final By _lblPIDError = By.xpath("//label[@for='pid' and @class='validation-error']");
+    protected final By txtEmail = By.id("email");
+    protected final By txtPassword = By.id("password");
+    protected final By txtConfirmPassword = By.id("confirmPassword");
+    protected final By txtPID = By.id("pid");
+    protected final By btnRegister = By.xpath("//input[@value='Register']");
+    protected final By lblRegisterSuccessMsg = By.xpath("//*[@id='content']/p");
+    protected final By lblRegisterErrorMsg = By.xpath("//p[@class='message error']");
+    protected final By lblPasswordError = By.xpath("//label[@for='password' and @class='validation-error']");
+    protected final By lblPIDError = By.xpath("//label[@for='pid' and @class='validation-error']");
 
     //Elements
     protected WebElement getTxtEmail() {
-        return CommonActions.getElement(_txtEmail);
+        return CommonActions.getElement(txtEmail);
     }
 
     protected WebElement getTxtPassword() {
-        return CommonActions.getElement(_txtPassword);
+        return CommonActions.getElement(txtPassword);
     }
 
     protected WebElement getTxtConfirmPassword() {
-        return CommonActions.getElement(_txtConfirmPassword);
+        return CommonActions.getElement(txtConfirmPassword);
     }
 
     protected WebElement getTxtPID() {
-        return CommonActions.getElement(_txtPID);
+        return CommonActions.getElement(txtPID);
     }
 
     protected WebElement getBtnRegister() {
-        return CommonActions.getElement(_btnRegister);
+        return CommonActions.getElement(btnRegister);
     }
 
     //Methods
