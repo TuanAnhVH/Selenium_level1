@@ -37,6 +37,18 @@ public class RegisterPage {
         return CommonActions.getElement(btnRegister);
     }
 
+    protected WebElement getLblSuccessMsg() {
+        return CommonActions.getElement(lblRegisterSuccessMsg);
+    }
+
+    protected WebElement getLblErrorMsg() { return CommonActions.getElement(lblRegisterErrorMsg); }
+
+    protected WebElement getLblPasswordError() { return CommonActions.getElement(lblPasswordError); }
+
+    protected WebElement getLblPIDError() { return CommonActions.getElement(lblPIDError); }
+
+
+
     //Methods
     public void register(String email, String password, String confirmPassword, String pidNumber) {
         CommonActions.enterDataToTextbox(getTxtEmail(), email);

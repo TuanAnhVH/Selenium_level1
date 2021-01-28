@@ -1,7 +1,6 @@
 package railway;
 
 import common.CommonActions;
-import common.DataProviders;
 import constant.Constant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,7 +13,7 @@ public class TC08_LoginWithAnUnactivedAccount extends TestBase {
     private final RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
 
-    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "getDataObject")
     public void TC08(Hashtable<String, String> data) {
         System.out.println("TC08 - User can't login with an account hasn't been activated");
 
@@ -32,9 +31,9 @@ public class TC08_LoginWithAnUnactivedAccount extends TestBase {
         loginPage.login(email, Constant.PASSWORD);
 
         System.out.println("Check error message is exist");
-        Assert.assertTrue(CommonActions.doesControlExist(loginPage.lblLoginErrorMsg), "Error message is not displayed");
+        Assert.assertTrue(doesControlExist(loginPage.lblLoginErrorMsg), "Error message is not displayed");
 
         System.out.println("Check error message displays");
-        CommonActions.checkMessageDisplays(loginPage.lblLoginErrorMsg, data.get("expectedMessage"));
+        Assert.assertEquals(loginPage.getErrorMsg().getText(),data.get("expectedMessage"));
     }
 }

@@ -10,6 +10,7 @@ public class Constant {
     public static final String PID = "12345678";
     public static final int TIME_WAIT_CONTROL = 5;
     public static final int TIME_WAIT_PAGE = 1000;
-    public static final String CHROME_DRIVER_LOCATE = "\\executables\\chromeDriver.exe";
-    public static final String GECKO_DRIVER_LOCATE = "\\executables\\geckodriver.exe";
+    public static final String CHROME_DRIVER_PATH = "\\executables\\chromeDriver.exe";
+    public static final String GECKO_DRIVER_PATH = "\\executables\\geckodriver.exe";
+    public static final String DATA_FILE_PATH = ".\\resources\\json_files\\Data.json";
 }

@@ -1,7 +1,5 @@
 package railway;
 
-import common.CommonActions;
-import common.DataProviders;
 import constant.Constant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,7 +13,7 @@ public class TC16_CancelTicket extends TestBase {
     BookTicketPage bookTicketPage = new BookTicketPage();
     MyTicketPage myTicketPage = new MyTicketPage();
 
-    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "getDataObject")
     public void TC16(Hashtable<String, String> data) {
         System.out.println("TC16 - User can cancel a ticket.");
 
@@ -41,7 +39,7 @@ public class TC16_CancelTicket extends TestBase {
         Constant.WEBDRIVER.switchTo().alert().accept();
 
         System.out.println("Check the canceled ticket is disappeared.");
-        boolean checkExist = CommonActions.doesControlExist(myTicketPage._btnCancel(data.get("departStation"), data.get("arriveStation")));
+        boolean checkExist = doesControlExist(myTicketPage._btnCancel(data.get("departStation"), data.get("arriveStation")));
         Assert.assertFalse(checkExist, "The ticket has not been canceled");
     }
 }

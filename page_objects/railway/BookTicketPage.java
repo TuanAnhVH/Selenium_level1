@@ -1,9 +1,22 @@
 package railway;
 
+
 import common.CommonActions;
+import constant.Constant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import javax.swing.*;
+import javax.swing.text.html.Option;
+import java.lang.invoke.ConstantCallSite;
+import java.sql.Time;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class BookTicketPage extends GeneralPage {
 
@@ -41,21 +54,30 @@ public class BookTicketPage extends GeneralPage {
         return CommonActions.getElement(btnBookTicket);
     }
 
-    //methods
-    public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
-        getCbbDepartDate().selectByVisibleText(departDate);
-        getCbbDepartFrom().selectByVisibleText(departStation);
-        CommonActions.waitForPage();
-        getCbbArriveAT().selectByVisibleText(arriveStation);
-        getCbbSeatType().selectByVisibleText(seatType);
-        getCbbTicketAmount().selectByValue(ticketAmount);
-        getBtnBookTicket().click();
+    protected WebElement getLblBookingError() {
+        return CommonActions.getElement(lblBookingError);
     }
 
+    protected WebElement getLblTicketAmountError() {
+        return CommonActions.getElement(lblTicketAmountError);
+    }
+
+    //methods
     public String getSelectedItem(String selectName) {
         String path = String.format("//select[@name='%s']//option[@selected='selected']", selectName);
         By selectedItem = By.xpath(path);
         return CommonActions.getElement(selectedItem).getText();
     }
+
+    public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
+
+        getCbbDepartDate().selectByVisibleText(departDate);
+        getCbbDepartFrom().selectByVisibleText(departStation);
+        getCbbSeatType().selectByVisibleText(seatType);
+        getCbbTicketAmount().selectByValue(ticketAmount);
+        getCbbArriveAT().selectByVisibleText(arriveStation);
+        getBtnBookTicket().click();
+    }
+
 
 }

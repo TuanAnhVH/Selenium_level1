@@ -1,8 +1,8 @@
 package railway;
 
 import common.CommonActions;
-import common.DataProviders;
 import constant.Constant;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import testbase.TestBase;
@@ -27,7 +27,7 @@ public class TC14_BookMore10Ticket extends TestBase {
         registerPage.register(email, password, password, Constant.PID);
     }
 
-    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "getDataObject")
     public void TC14(Hashtable<String, String> data) {
         System.out.println("TC14 - User can't book more than 10 tickets");
 
@@ -37,21 +37,23 @@ public class TC14_BookMore10Ticket extends TestBase {
         System.out.println("Login with a valid account.");
         loginPage.login(email, password);
 
+        System.out.println("Wait for the page on logged in state");
+        CommonActions.waiForControl(homePage.tabMyTicket);
+
         System.out.println("Go to the 'Book ticket' page.");
         homePage.gotoBookTicketPage();
 
         System.out.println("Book 10 tickets.");
         bookTicketPage.bookTicket(data.get("departDate"), data.get("departStation"), data.get("arriveStation"), data.get("seatType"), "10");
 
-        homePage.gotoBookTicketPage();
-
         System.out.println("Book more tickets.");
+        homePage.gotoBookTicketPage();
         bookTicketPage.bookTicket(data.get("departDate"), data.get("departStation"), data.get("arriveStation"), data.get("seatType"), data.get("ticketAmount"));
 
         System.out.println("Check the Book ticket message displays.");
-        CommonActions.checkMessageDisplays(bookTicketPage.lblBookingError, data.get("expectedBookingMessage"));
+        Assert.assertEquals(bookTicketPage.getLblBookingError().getText(),data.get("expectedBookingMessage"));
 
         System.out.println("Check the 'Amount ticket' message displays.");
-        CommonActions.checkMessageDisplays(bookTicketPage.lblTicketAmountError, data.get("expectedTicketAmountMessage"));
+        Assert.assertEquals(bookTicketPage.getLblTicketAmountError().getText(),data.get("expectedTicketAmountMessage"));
     }
 }

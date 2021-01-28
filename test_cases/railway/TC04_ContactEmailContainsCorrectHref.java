@@ -1,6 +1,5 @@
 package railway;
 
-import common.DataProviders;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import testbase.TestBase;
@@ -11,7 +10,7 @@ public class TC04_ContactEmailContainsCorrectHref extends TestBase {
     private HomePage homePage = new HomePage();
     private ContactPage contactPage = new ContactPage();
 
-    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "getDataObject")
     public void TC04(Hashtable<String, String> data) {
         System.out.println("TC04 - Contact Email contains correct href value which can help to quickly open Outlook Compose Message dialog");
 

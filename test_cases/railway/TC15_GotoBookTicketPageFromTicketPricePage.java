@@ -1,6 +1,5 @@
 package railway;
 
-import common.DataProviders;
 import constant.Constant;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -16,7 +15,7 @@ public class TC15_GotoBookTicketPageFromTicketPricePage extends TestBase {
     TrainPriceListPage trainPriceListPage = new TrainPriceListPage();
 
 
-    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "getDataObject")
     public void TC15(Hashtable<String, String> data) {
         System.out.println("TC15 - User can open 'Book ticket' page by click on 'Book ticket' link in 'Ticket price'");
         SoftAssert softAssert = new SoftAssert();

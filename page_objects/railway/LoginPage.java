@@ -1,6 +1,7 @@
 package railway;
 
 import common.CommonActions;
+import common.Utilities;
 import constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -45,6 +46,7 @@ public class LoginPage extends GeneralPage {
         CommonActions.enterDataToTextbox(getTxtUsername(), username);
         CommonActions.enterDataToTextbox(getTxtPassword(), password);
         CommonActions.clickOnElement(getBtnLogin());
+        Utilities.waitForLoad();
     }
     public void loginMutipleTimes(String username, String password,int times) {
         while (times>0)

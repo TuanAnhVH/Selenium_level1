@@ -1,8 +1,8 @@
 package railway;
 
 import common.CommonActions;
-import common.DataProviders;
 import constant.Constant;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import testbase.TestBase;
 
@@ -12,7 +12,7 @@ public class TC07_CreateAcountWithValidData extends TestBase {
     private final HomePage homePage = new HomePage();
     private final RegisterPage registerPage = new RegisterPage();
 
-    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "getDataObject")
     public void TC07(Hashtable<String, String> data) {
         System.out.println("TC07 - User can create new account");
 
@@ -24,6 +24,6 @@ public class TC07_CreateAcountWithValidData extends TestBase {
         registerPage.register(email, Constant.PASSWORD, Constant.PASSWORD, Constant.PID);
 
         System.out.println("Check the register message displays.");
-        CommonActions.checkMessageDisplays(registerPage.lblRegisterSuccessMsg, data.get("expectedMessage"));
+        Assert.assertEquals(registerPage.getLblSuccessMsg().getText(),data.get("expectedMessage"));
     }
 }

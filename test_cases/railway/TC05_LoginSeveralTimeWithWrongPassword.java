@@ -1,8 +1,8 @@
 package railway;
 
 import common.CommonActions;
-import common.DataProviders;
 import constant.Constant;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import testbase.TestBase;
 
@@ -13,7 +13,7 @@ public class TC05_LoginSeveralTimeWithWrongPassword extends TestBase {
     private final HomePage homePage = new HomePage();
     private final LoginPage loginPage = new LoginPage();
 
-    @Test(dataProvider = "getData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "getDataObject")
     public void TC05(Hashtable<String, String> data) {
         System.out.println("TC05 - System shows message when user enters wrong password several times");
 
@@ -24,6 +24,6 @@ public class TC05_LoginSeveralTimeWithWrongPassword extends TestBase {
         loginPage.loginMutipleTimes(Constant.USERNAME, Constant.PASSWORD + "1", 4);
 
         System.out.println("Check the error message displays");
-        CommonActions.checkMessageDisplays(loginPage.lblLoginErrorMsg, data.get("expectedMessage"));
+        Assert.assertEquals(loginPage.getErrorMsg().getText(),data.get("expectedMessage"));
     }
 }
