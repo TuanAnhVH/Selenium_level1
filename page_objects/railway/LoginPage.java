@@ -6,6 +6,8 @@ import constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.concurrent.TimeUnit;
+
 public class LoginPage extends GeneralPage {
 
     //Locators
@@ -17,23 +19,23 @@ public class LoginPage extends GeneralPage {
 
     //Elements
     protected WebElement getTxtUsername() {
-        return CommonActions.getElement(txtUsername);
+        return this.getElement(txtUsername);
     }
 
     protected WebElement getTxtPassword() {
-        return CommonActions.getElement(txtPassword);
+        return this.getElement(txtPassword);
     }
 
     protected WebElement getBtnLogin() {
-        return CommonActions.getElement(btnLogin);
+        return this.getElement(btnLogin);
     }
 
     protected WebElement getErrorMsg() {
-        return CommonActions.getElement(lblLoginErrorMsg);
+        return this.getElement(lblLoginErrorMsg);
     }
 
     protected WebElement getLinkForgotPassword() {
-        return CommonActions.getElement(linkForgotPassword);
+        return this.getElement(linkForgotPassword);
     }
 
     //Element methods
@@ -43,11 +45,11 @@ public class LoginPage extends GeneralPage {
 
     //Methods
     public void login(String username, String password) {
-        CommonActions.enterDataToTextbox(getTxtUsername(), username);
-        CommonActions.enterDataToTextbox(getTxtPassword(), password);
-        CommonActions.clickOnElement(getBtnLogin());
-        Utilities.waitForLoad();
+        enterDataToTextbox(getTxtUsername(), username);
+        enterDataToTextbox(getTxtPassword(), password);
+        clickOnElement(getBtnLogin());
     }
+
     public void loginMutipleTimes(String username, String password,int times) {
         while (times>0)
         {

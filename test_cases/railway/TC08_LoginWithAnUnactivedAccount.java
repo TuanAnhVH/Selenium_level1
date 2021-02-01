@@ -13,7 +13,7 @@ public class TC08_LoginWithAnUnactivedAccount extends TestBase {
     private final RegisterPage registerPage = new RegisterPage();
     LoginPage loginPage = new LoginPage();
 
-    @Test(dataProvider = "getDataObject")
+    @Test(dataProvider = "getDataObjects")
     public void TC08(Hashtable<String, String> data) {
         System.out.println("TC08 - User can't login with an account hasn't been activated");
 

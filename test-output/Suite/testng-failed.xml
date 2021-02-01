@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Chrome Test(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="railway.TC08_LoginWithAnUnactivedAccount">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="TC08" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- railway.TC08_LoginWithAnUnactivedAccount -->
+      <class name="railway.TC05_LoginSeveralTimeWithWrongPassword">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="TC05" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- railway.TC05_LoginSeveralTimeWithWrongPassword -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+  <test thread-count="5" name="FireFox Test(failed)">
+    <parameter name="browser" value="FireFox"/>
+    <classes>
+      <class name="railway.TC08_LoginWithAnUnactivedAccount">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="TC08" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- railway.TC08_LoginWithAnUnactivedAccount -->
+      <class name="railway.TC05_LoginSeveralTimeWithWrongPassword">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="TC05" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- railway.TC05_LoginSeveralTimeWithWrongPassword -->
+    </classes>
+  </test> <!-- FireFox Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

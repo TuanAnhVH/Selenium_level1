@@ -7,13 +7,14 @@ import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Hashtable;
 
-public class TestBase extends Utilities {
+public class TestBase extends CommonActions {
 
     @Parameters("browser")
     @BeforeClass()
-    public void beforeClass(@Optional("Chrome") String browser) {
+    public void beforeClass(@Optional("FireFox") String browser) {
         System.out.println("Pre-condition");
         setupBrowser(browser);
         maximizeBrowser();
@@ -23,11 +24,11 @@ public class TestBase extends Utilities {
     @AfterClass
     public void afterClass() {
         System.out.println("Post-condition");
-//        Constant.WEBDRIVER.quit();
+        Constant.WEBDRIVER.quit();
     }
 
-    @DataProvider(name = "getDataObject")
-    public Object[] getDataObject() {
+    @DataProvider(name = "getDataObjects")
+    public Object[] getDataObjects() {
         String className = getClass().getSimpleName();
         return getData(className,Constant.DATA_FILE_PATH);
     }

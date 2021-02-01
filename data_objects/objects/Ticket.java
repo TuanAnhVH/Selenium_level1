@@ -1,10 +1,9 @@
 package objects;
 
 public class Ticket {
-    public  String departDate;
-    public  String departStation;
-    public  String arriveStation;
-    public  String seatType;
-    public  String ticketAmount;
-
+//    public String departDate;
+    public String departStation;
+    public String arriveStation;
+    public String seatType;
+//    public String ticketAmount;
 }

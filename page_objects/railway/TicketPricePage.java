@@ -9,11 +9,11 @@ public class TicketPricePage extends GeneralPage{
     //Elements
     protected WebElement getBtnBookTicket(String seatype){
         String path= String.format("//td[text()='%s']//ancestor::tr//a[@class='BoxLink']",seatype);
-        return CommonActions.getElement(By.xpath(path));
+        return getElement(By.xpath(path));
     }
 
     //Methods
     public void bookTicket(String seatType){
-        CommonActions.clickOnElement(getBtnBookTicket(seatType));
+        this.clickOnElement(getBtnBookTicket(seatType));
     }
 }

@@ -3,22 +3,17 @@ package common;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import constant.Constant;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
-import java.sql.Driver;
-import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.concurrent.TimeUnit;
 
 public class Utilities {
 
@@ -30,13 +25,11 @@ public class Utilities {
         String path;
         switch (browser) {
             case "Chrome":
-                path = System.getProperty("user.dir") + Constant.CHROME_DRIVER_PATH;
-                System.setProperty("webdriver.chrome.driver", path);
+                WebDriverManager.chromedriver().clearResolutionCache().setup();
                 Constant.WEBDRIVER = new ChromeDriver();
                 break;
             case "FireFox":
-                path = System.getProperty("user.dir") + Constant.GECKO_DRIVER_PATH;
-                System.setProperty("webdriver.gecko.driver", path);
+                WebDriverManager.firefoxdriver().setup();
                 Constant.WEBDRIVER = new FirefoxDriver();
                 break;
         }
@@ -50,14 +43,14 @@ public class Utilities {
             return true;
     }
 
-    public static void waiForControl(By locator) {
-        WebDriverWait webDriverWait = new WebDriverWait(Constant.WEBDRIVER, Constant.TIME_WAIT_CONTROL);
+    public static void waiForControlVisibility(By locator) {
+        WebDriverWait webDriverWait = new WebDriverWait(Constant.WEBDRIVER, Constant.TIME_WAIT_CONTROL_VISIBILITY);
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public static void waitForLoad() {
-        new WebDriverWait(Constant.WEBDRIVER, 30).until((ExpectedCondition<Boolean>) wd ->
-                ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+    public static void waiForControlClickable(By locator) {
+        WebDriverWait webDriverWait = new WebDriverWait(Constant.WEBDRIVER, Constant.TIME_WAIT_CONTROL_CLICKABLE);
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     public static Object[] getData(String key, String dataFilePath) {

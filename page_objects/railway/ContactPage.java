@@ -8,6 +8,6 @@ public class ContactPage extends GeneralPage {
     public final By emailLink = By.xpath("//div[@class='contact']//b[contains(text(),'Email')]//following-sibling::a");
 
     protected WebElement getEmailLink() {
-        return CommonActions.getElement(emailLink);
+        return this.getElement(emailLink);
     }
 }

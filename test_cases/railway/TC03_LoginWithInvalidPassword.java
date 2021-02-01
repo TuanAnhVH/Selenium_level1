@@ -12,7 +12,7 @@ public class TC03_LoginWithInvalidPassword extends TestBase {
     private final HomePage homePage = new HomePage();
     private final LoginPage loginPage = new LoginPage();
 
-    @Test(dataProvider = "getDataObject")
+    @Test(dataProvider = "getDataObjects")
     public void TC03(Hashtable<String, String> data) {
         System.out.println("TC03 - User cannot log into Railway with invalid password");
 

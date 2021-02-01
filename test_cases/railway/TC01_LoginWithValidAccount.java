@@ -6,8 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import testbase.TestBase;
 
-import java.util.Hashtable;
-
 public class TC01_LoginWithValidAccount extends TestBase {
     private final HomePage homePage = new HomePage();
     private final LoginPage loginPage = new LoginPage();

@@ -13,7 +13,7 @@ public class TC05_LoginSeveralTimeWithWrongPassword extends TestBase {
     private final HomePage homePage = new HomePage();
     private final LoginPage loginPage = new LoginPage();
 
-    @Test(dataProvider = "getDataObject")
+    @Test(dataProvider = "getDataObjects")
     public void TC05(Hashtable<String, String> data) {
         System.out.println("TC05 - System shows message when user enters wrong password several times");
 

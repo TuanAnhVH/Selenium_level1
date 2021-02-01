@@ -12,7 +12,7 @@ public class TC07_CreateAcountWithValidData extends TestBase {
     private final HomePage homePage = new HomePage();
     private final RegisterPage registerPage = new RegisterPage();
 
-    @Test(dataProvider = "getDataObject")
+    @Test(dataProvider = "getDataObjects")
     public void TC07(Hashtable<String, String> data) {
         System.out.println("TC07 - User can create new account");
 

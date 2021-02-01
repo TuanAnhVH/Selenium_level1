@@ -12,10 +12,9 @@ public class TC10_ResetPasswordWithIncorrectEmail extends TestBase {
     private LoginPage loginPage = new LoginPage();
     private ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage();
 
-    @Test(dataProvider = "getDataObject")
+    @Test(dataProvider = "getDataObjects")
     public void TC10(Hashtable<String, String> data) {
         System.out.println("TC10 - User can't reset password if enter incorrect email address");
-        CommonActions.navigateToRailway();
 
         System.out.println("Go to 'Login' page.");
         homePage.gotoLoginPage();
@@ -24,7 +23,7 @@ public class TC10_ResetPasswordWithIncorrectEmail extends TestBase {
         loginPage.gotoForgotPasswordPage();
 
         System.out.println("Reset password with invalid Email.");
-        String email = CommonActions.getRandomEmail();
+        String email = getRandomEmail();
         forgotPasswordPage.resetPassword(email);
 
         System.out.println("Check the error message.");

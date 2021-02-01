@@ -12,7 +12,7 @@ public class TC02_LoginWithBlankUsername extends TestBase {
     private final HomePage homePage = new HomePage();
     private final LoginPage loginPage = new LoginPage();
 
-    @Test(dataProvider = "getDataObject")
+    @Test(dataProvider = "getDataObjects")
     public void TC02(Hashtable<String, String> data) {
         System.out.println("TC02 - User can't login with blank 'Username' textbox");
 

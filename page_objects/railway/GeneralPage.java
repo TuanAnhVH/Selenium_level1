@@ -1,10 +1,11 @@
 package railway;
 
 import common.CommonActions;
+import common.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class GeneralPage {
+public class GeneralPage extends CommonActions {
     //locators
 
     protected final By tabContact = By.xpath("//div[@id='menu']//a[@href='/Page/Contact.cshtml']");
@@ -19,23 +20,23 @@ public class GeneralPage {
 
     //Elements
     protected WebElement getTabContact() {
-        return CommonActions.getElement(tabContact);
+        return this.getElement(tabContact);
     }
 
     protected WebElement getTabTicketPrice() {
-        return CommonActions.getElement(tabTicketPrice);
+        return this.getElement(tabTicketPrice);
     }
 
     protected WebElement getTabBookTicket() {
-        return CommonActions.getElement(tabBookTicket);
+        return this.getElement(tabBookTicket);
     }
 
     protected WebElement getTabLogout() {
-        return CommonActions.getElement(tabLogout);
+        return this.getElement(tabLogout);
     }
 
     protected WebElement getTabMyTicket() {
-        return CommonActions.getElement(tabMyTicket);
+        return this.getElement(tabMyTicket);
     }
 
     protected WebElement getRegister() {
@@ -43,16 +44,14 @@ public class GeneralPage {
     }
 
     protected WebElement getTabChangePassword() {
-        return CommonActions.getElement(tabChangePassword);
+        return this.getElement(tabChangePassword);
     }
 
     protected WebElement getTabLogin() {
-        return CommonActions.getElement(tabLogin);
+        return this.getElement(tabLogin);
     }
 
-    protected WebElement getLblWelcomeMessage() {
-        return CommonActions.getElement(lblWelcomeMessage);
-    }
+    protected WebElement getLblWelcomeMessage() { return this.getElement(lblWelcomeMessage); }
 
     //Methods
 
@@ -85,5 +84,4 @@ public class GeneralPage {
     public void logout() {
         this.getTabLogout().click();
     }
-
 }

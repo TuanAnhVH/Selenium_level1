@@ -40,8 +40,6 @@
     "seatType": "Soft seat with air conditioner"
   }],
   "TC16_CancelTicket": [{
-    "userName": "sattdn2003011@mail.com",
-    "password": "12345678",
     "departDate": "2/13/2021",
     "departStation": "Quảng Ngãi",
     "arriveStation": "Huế",

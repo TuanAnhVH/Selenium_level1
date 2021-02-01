@@ -12,20 +12,20 @@ public class ForgotPasswordPage extends GeneralPage {
 
     //Elements
     protected WebElement getTxtEmail() {
-        return CommonActions.getElement(txtEmail);
+        return this.getElement(txtEmail);
     }
 
     protected WebElement getbtnSend() {
-        return CommonActions.getElement(btnSend);
+        return this.getElement(btnSend);
     }
 
     protected WebElement getErrorMsg() {
-        return CommonActions.getElement(lblErrorMsg);
+        return this.getElement(lblErrorMsg);
     }
 
     //Methods
     public void resetPassword(String email) {
-        CommonActions.enterDataToTextbox(getTxtEmail(), email);
+        this.enterDataToTextbox(getTxtEmail(), email);
         getbtnSend().click();
     }
 

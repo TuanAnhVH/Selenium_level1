@@ -10,7 +10,7 @@ public class TC04_ContactEmailContainsCorrectHref extends TestBase {
     private HomePage homePage = new HomePage();
     private ContactPage contactPage = new ContactPage();
 
-    @Test(dataProvider = "getDataObject")
+    @Test(dataProvider = "getDataObjects")
     public void TC04(Hashtable<String, String> data) {
         System.out.println("TC04 - Contact Email contains correct href value which can help to quickly open Outlook Compose Message dialog");
 

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_Suite">
-              <span class="suite-name border-passed">Default Suite</span>
+              <span class="suite-name border-failed">Default Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">13 methods, 2 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods failed suite-Default_Suite"> (hide)</a> <!-- hide-methods failed suite-Default_Suite -->
+                      <a href="#" panel-name="suite-Default_Suite" class="show-methods failed suite-Default_Suite"> (show)</a> <!-- show-methods failed suite-Default_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC05_LoginSeveralTimeWithWrongPassword" hash-for-method="TC05({expectedMessage=You have used 4 out of 5 login attempts. After all 5 have been used, you will be un...)">TC05({expectedMessage=You have used 4 out of 5 login attempts. After all 5 have been used, you will be un...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC08_LoginWithAnUnactivedAccount" hash-for-method="TC08({expectedMessage=Invalid username or password. Please try again.})">TC08({expectedMessage=Invalid username or password. Please try again.})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +121,57 @@
                     <div class="method-list-content passed suite-Default_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.BookingTest" hash-for-method="TC14">TC14</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC01_LoginWithValidAccount" hash-for-method="TC01">TC01</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC02_LoginWithBlankUsername" hash-for-method="TC02({expectedMessage=There was a problem with your login and/or errors exist in your form.})">TC02({expectedMessage=There was a problem with your login and/or errors exist in your form.})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC03_LoginWithInvalidPassword" hash-for-method="TC03({expectedMessage=Invalid username or password. Please try again.})">TC03({expectedMessage=Invalid username or password. Please try again.})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC04_ContactEmailContainsCorrectHref" hash-for-method="TC04({expectedHref=mailto:thanh.viet.le@logigear.com})">TC04({expectedHref=mailto:thanh.viet.le@logigear.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC06_AdditionalPagesDisplayAfterLogin" hash-for-method="TC06">TC06</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC07_CreateAcountWithValidData" hash-for-method="TC07({expectedMessage=Registration Confirmed! You can now log in to the site.})">TC07({expectedMessage=Registration Confirmed! You can now log in to the site.})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC10_ResetPasswordWithIncorrectEmail" hash-for-method="TC10({expectedMessage=This email address doesn&#039;t exist.})">TC10({expectedMessage=This email address doesn't exist.})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC11_CreateAcountWithBlankPwdAndPID" hash-for-method="TC11({expectedRegisterMessage=There&#039;re errors in the form. Please correct the errors and try again., expe...)">TC11({expectedRegisterMessage=There're errors in the form. Please correct the errors and try again., expe...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC14_BookMore10Ticket" hash-for-method="TC14({departStation=Huế, expectedTicketAmountMessage=You have booked 10 tickets. You can book no more., e...)">TC14({departStation=Huế, expectedTicketAmountMessage=You have booked 10 tickets. You can book no more., e...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC15_GotoBookTicketPageFromTicketPricePage" hash-for-method="TC15({departStation=Đà Nẵng, arriveStation=Quảng Ngãi, seatType=Soft seat with air conditioner})">TC15({departStation=Đà Nẵng, arriveStation=Quảng Ngãi, seatType=Soft seat with air conditioner})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_Suite" title="railway.TC16_CancelTicket" hash-for-method="TC16({departStation=Quảng Ngãi, ticketAmount=1, departDate=2/13/2021, arriveStation=Huế, seatType=Soft be...)">TC16({departStation=Quảng Ngãi, ticketAmount=1, departDate=2/13/2021, arriveStation=Huế, seatType=Soft be...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
@@ -117,17 +186,222 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_Suite" class="panel Default_Suite">
-          <div class="suite-Default_Suite-class-passed">
+          <div class="suite-Default_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">railway.BookingTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">railway.TC08_LoginWithAnUnactivedAccount</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC14">
-                  </a> <!-- TC14 -->
+                  <a name="TC08({expectedMessage=Invalid username or password. Please try again.})">
+                  </a> <!-- TC08({expectedMessage=Invalid username or password. Please try again.}) -->
+                  <span class="method-name">TC08</span>
+                  <span class="parameters">({expectedMessage=Invalid username or password. Please try again.})</span>
+                  <div class="stack-trace">java.lang.AssertionError: Error message is not displayed expected [true] but found [false]
+	at railway.TC08_LoginWithAnUnactivedAccount.TC08(TC08_LoginWithAnUnactivedAccount.java:34)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-failed -->
+          <div class="suite-Default_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">railway.TC05_LoginSeveralTimeWithWrongPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC05({expectedMessage=You have used 4 out of 5 login attempts. After all 5 have been used, you will be un...)">
+                  </a> <!-- TC05({expectedMessage=You have used 4 out of 5 login attempts. After all 5 have been used, you will be un...) -->
+                  <span class="method-name">TC05</span>
+                  <span class="parameters">({expectedMessage=You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.})</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]
+	at railway.TC05_LoginSeveralTimeWithWrongPassword.TC05(TC05_LoginSeveralTimeWithWrongPassword.java:27)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-failed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC15_GotoBookTicketPageFromTicketPricePage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC15({departStation=Đà Nẵng, arriveStation=Quảng Ngãi, seatType=Soft seat with air conditioner})">
+                  </a> <!-- TC15({departStation=Đà Nẵng, arriveStation=Quảng Ngãi, seatType=Soft seat with air conditioner}) -->
+                  <span class="method-name">TC15</span>
+                  <span class="parameters">({departStation=Đà Nẵng, arriveStation=Quảng Ngãi, seatType=Soft seat with air conditioner})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC04_ContactEmailContainsCorrectHref</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC04({expectedHref=mailto:thanh.viet.le@logigear.com})">
+                  </a> <!-- TC04({expectedHref=mailto:thanh.viet.le@logigear.com}) -->
+                  <span class="method-name">TC04</span>
+                  <span class="parameters">({expectedHref=mailto:thanh.viet.le@logigear.com})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC16_CancelTicket</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC16({departStation=Quảng Ngãi, ticketAmount=1, departDate=2/13/2021, arriveStation=Huế, seatType=Soft be...)">
+                  </a> <!-- TC16({departStation=Quảng Ngãi, ticketAmount=1, departDate=2/13/2021, arriveStation=Huế, seatType=Soft be...) -->
+                  <span class="method-name">TC16</span>
+                  <span class="parameters">({departStation=Quảng Ngãi, ticketAmount=1, departDate=2/13/2021, arriveStation=Huế, seatType=Soft bed})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC01_LoginWithValidAccount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC01">
+                  </a> <!-- TC01 -->
+                  <span class="method-name">TC01</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC03_LoginWithInvalidPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC03({expectedMessage=Invalid username or password. Please try again.})">
+                  </a> <!-- TC03({expectedMessage=Invalid username or password. Please try again.}) -->
+                  <span class="method-name">TC03</span>
+                  <span class="parameters">({expectedMessage=Invalid username or password. Please try again.})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC07_CreateAcountWithValidData</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC07({expectedMessage=Registration Confirmed! You can now log in to the site.})">
+                  </a> <!-- TC07({expectedMessage=Registration Confirmed! You can now log in to the site.}) -->
+                  <span class="method-name">TC07</span>
+                  <span class="parameters">({expectedMessage=Registration Confirmed! You can now log in to the site.})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC14_BookMore10Ticket</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC14({departStation=Huế, expectedTicketAmountMessage=You have booked 10 tickets. You can book no more., e...)">
+                  </a> <!-- TC14({departStation=Huế, expectedTicketAmountMessage=You have booked 10 tickets. You can book no more., e...) -->
                   <span class="method-name">TC14</span>
+                  <span class="parameters">({departStation=Huế, expectedTicketAmountMessage=You have booked 10 tickets. You can book no more., expectedBookingMessage=There're errors in the form. Please correct the errors and try again., ticketAmount=1, departDate=2/13/2021, arriveStation=Nha Trang, seatType=Soft seat})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC10_ResetPasswordWithIncorrectEmail</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC10({expectedMessage=This email address doesn&#039;t exist.})">
+                  </a> <!-- TC10({expectedMessage=This email address doesn't exist.}) -->
+                  <span class="method-name">TC10</span>
+                  <span class="parameters">({expectedMessage=This email address doesn't exist.})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC06_AdditionalPagesDisplayAfterLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC06">
+                  </a> <!-- TC06 -->
+                  <span class="method-name">TC06</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC11_CreateAcountWithBlankPwdAndPID</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC11({expectedRegisterMessage=There&#039;re errors in the form. Please correct the errors and try again., expe...)">
+                  </a> <!-- TC11({expectedRegisterMessage=There're errors in the form. Please correct the errors and try again., expe...) -->
+                  <span class="method-name">TC11</span>
+                  <span class="parameters">({expectedRegisterMessage=There're errors in the form. Please correct the errors and try again., expectedPasswordMessage=Invalid password length, expectedPIDMessage=Invalid ID length})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-passed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">railway.TC02_LoginWithBlankUsername</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC02({expectedMessage=There was a problem with your login and/or errors exist in your form.})">
+                  </a> <!-- TC02({expectedMessage=There was a problem with your login and/or errors exist in your form.}) -->
+                  <span class="method-name">TC02</span>
+                  <span class="parameters">({expectedMessage=There was a problem with your login and/or errors exist in your form.})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,11 +416,23 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;SeleniumLevel1&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Selenium_level1&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;railway.BookingTest&quot;/&gt;
+      &lt;class name=&quot;railway.TC01_LoginWithValidAccount&quot;/&gt;
+      &lt;class name=&quot;railway.TC02_LoginWithBlankUsername&quot;/&gt;
+      &lt;class name=&quot;railway.TC03_LoginWithInvalidPassword&quot;/&gt;
+      &lt;class name=&quot;railway.TC04_ContactEmailContainsCorrectHref&quot;/&gt;
+      &lt;class name=&quot;railway.TC05_LoginSeveralTimeWithWrongPassword&quot;/&gt;
+      &lt;class name=&quot;railway.TC06_AdditionalPagesDisplayAfterLogin&quot;/&gt;
+      &lt;class name=&quot;railway.TC07_CreateAcountWithValidData&quot;/&gt;
+      &lt;class name=&quot;railway.TC08_LoginWithAnUnactivedAccount&quot;/&gt;
+      &lt;class name=&quot;railway.TC10_ResetPasswordWithIncorrectEmail&quot;/&gt;
+      &lt;class name=&quot;railway.TC11_CreateAcountWithBlankPwdAndPID&quot;/&gt;
+      &lt;class name=&quot;railway.TC14_BookMore10Ticket&quot;/&gt;
+      &lt;class name=&quot;railway.TC15_GotoBookTicketPageFromTicketPricePage&quot;/&gt;
+      &lt;class name=&quot;railway.TC16_CancelTicket&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- SeleniumLevel1 --&gt;
+  &lt;/test&gt; &lt;!-- Selenium_level1 --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +444,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">SeleniumLevel1 (1 class)</span>
+                <span class="test-name">Selenium_level1 (13 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,23 +463,71 @@
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-                  suiteTableInitFunctions.push('tableData_Default_Suite');
-                  function tableData_Default_Suite() {
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('number', 'Number');
-                  data.addColumn('string', 'Method');
-                  data.addColumn('string', 'Class');
-                  data.addColumn('number', 'Time (ms)');
-                  data.addRows(1);
-                  data.setCell(0, 0, 0)
-                  data.setCell(0, 1, 'TC14')
-                  data.setCell(0, 2, 'railway.BookingTest')
-                  data.setCell(0, 3, 3144);
-                  window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
-                  return data;
-                  }
+suiteTableInitFunctions.push('tableData_Default_Suite');
+function tableData_Default_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(13);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TC14')
+data.setCell(0, 2, 'railway.TC14_BookMore10Ticket')
+data.setCell(0, 3, 10796);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TC16')
+data.setCell(1, 2, 'railway.TC16_CancelTicket')
+data.setCell(1, 3, 8312);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC05')
+data.setCell(2, 2, 'railway.TC05_LoginSeveralTimeWithWrongPassword')
+data.setCell(2, 3, 5711);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TC15')
+data.setCell(3, 2, 'railway.TC15_GotoBookTicketPageFromTicketPricePage')
+data.setCell(3, 3, 5455);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TC08')
+data.setCell(4, 2, 'railway.TC08_LoginWithAnUnactivedAccount')
+data.setCell(4, 3, 5335);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TC01')
+data.setCell(5, 2, 'railway.TC01_LoginWithValidAccount')
+data.setCell(5, 3, 2893);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'TC07')
+data.setCell(6, 2, 'railway.TC07_CreateAcountWithValidData')
+data.setCell(6, 3, 2892);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TC10')
+data.setCell(7, 2, 'railway.TC10_ResetPasswordWithIncorrectEmail')
+data.setCell(7, 3, 2878);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TC06')
+data.setCell(8, 2, 'railway.TC06_AdditionalPagesDisplayAfterLogin')
+data.setCell(8, 3, 2716);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'TC11')
+data.setCell(9, 2, 'railway.TC11_CreateAcountWithBlankPwdAndPID')
+data.setCell(9, 3, 2595);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'TC03')
+data.setCell(10, 2, 'railway.TC03_LoginWithInvalidPassword')
+data.setCell(10, 3, 2209);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'TC02')
+data.setCell(11, 2, 'railway.TC02_LoginWithBlankUsername')
+data.setCell(11, 3, 2134);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'TC04')
+data.setCell(12, 2, 'railway.TC04_ContactEmailContainsCorrectHref')
+data.setCell(12, 3, 1183);
+window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
+return data;
+}
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -219,22 +553,210 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">railway.BookingTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">railway.TC01_LoginWithValidAccount</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
+                <span class="method-name">beforeClass(FireFox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">15117 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC14</span>
-                <span class="method-start">18957 ms</span>
+                <span class="method-name">TC01</span>
+                <span class="method-start">10566 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">22106 ms</span>
+                <span class="method-start">13462 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC02_LoginWithBlankUsername</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">14989 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC02({expectedMessage=There was a problem with your login and/or errors exist in your form.})</span>
+                <span class="method-start">22694 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">24831 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC03_LoginWithInvalidPassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">26207 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC03({expectedMessage=Invalid username or password. Please try again.})</span>
+                <span class="method-start">33316 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">35525 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC04_ContactEmailContainsCorrectHref</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">36889 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC04({expectedHref=mailto:thanh.viet.le@logigear.com})</span>
+                <span class="method-start">44285 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">45468 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC05_LoginSeveralTimeWithWrongPassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">46876 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC05({expectedMessage=You have used 4 out of 5 login attempts. After all 5 have been used, you will be un...)</span>
+                <span class="method-start">54042 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">59758 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC06_AdditionalPagesDisplayAfterLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">61305 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC06</span>
+                <span class="method-start">72449 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">75166 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC07_CreateAcountWithValidData</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">76659 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC07({expectedMessage=Registration Confirmed! You can now log in to the site.})</span>
+                <span class="method-start">85309 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">88201 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC08_LoginWithAnUnactivedAccount</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">89687 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC08({expectedMessage=Invalid username or password. Please try again.})</span>
+                <span class="method-start">96910 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">102246 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC10_ResetPasswordWithIncorrectEmail</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">103645 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC10({expectedMessage=This email address doesn't exist.})</span>
+                <span class="method-start">112590 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">115468 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC11_CreateAcountWithBlankPwdAndPID</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">116932 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC11({expectedRegisterMessage=There're errors in the form. Please correct the errors and try again., expe...)</span>
+                <span class="method-start">123972 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">126569 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC14_BookMore10Ticket</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">128078 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">135138 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC14({departStation=Huế, expectedTicketAmountMessage=You have booked 10 tickets. You can book no more., e...)</span>
+                <span class="method-start">138078 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">148874 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC15_GotoBookTicketPageFromTicketPricePage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">150355 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">TC15({departStation=Đà Nẵng, arriveStation=Quảng Ngãi, seatType=Soft seat with air conditioner})</span>
+                <span class="method-start">157577 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">163032 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">railway.TC16_CancelTicket</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(FireFox)</span>
+                <span class="method-start">164547 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">171679 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC16({departStation=Quảng Ngãi, ticketAmount=1, departDate=2/13/2021, arriveStation=Huế, seatType=Soft be...)</span>
+                <span class="method-start">174422 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">182734 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

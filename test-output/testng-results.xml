@@ -1,29 +1,451 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="13" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default Suite" duration-ms="22140" started-at="2021-01-22T17:17:16 ICT" finished-at="2021-01-22T17:17:39 ICT">
+  <suite name="Default Suite" duration-ms="184174" started-at="2021-02-01T14:35:45 ICT" finished-at="2021-02-01T14:38:49 ICT">
     <groups>
     </groups>
-    <test name="SeleniumLevel1" duration-ms="22140" started-at="2021-01-22T17:17:16 ICT" finished-at="2021-01-22T17:17:39 ICT">
-      <class name="railway.BookingTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:railway.BookingTest@523884b2]" name="beforeClass" is-config="true" duration-ms="15099" started-at="2021-01-22T17:17:16 ICT" finished-at="2021-01-22T17:17:31 ICT">
+    <test name="Selenium_level1" duration-ms="184174" started-at="2021-02-01T14:35:45 ICT" finished-at="2021-02-01T14:38:49 ICT">
+      <class name="railway.TC04_ContactEmailContainsCorrectHref">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC04_ContactEmailContainsCorrectHref@31ef45e3]" name="beforeClass" is-config="true" duration-ms="7381" started-at="2021-02-01T14:36:22 ICT" finished-at="2021-02-01T14:36:29 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:railway.BookingTest@523884b2]" name="beforeMethod" is-config="true" duration-ms="3838" started-at="2021-01-22T17:17:32 ICT" finished-at="2021-01-22T17:17:35 ICT">
+        <test-method status="PASS" signature="TC04(java.util.Hashtable)[pri:0, instance:railway.TC04_ContactEmailContainsCorrectHref@31ef45e3]" name="TC04" duration-ms="1183" started-at="2021-02-01T14:36:29 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:36:30 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{expectedHref=mailto:thanh.viet.le@logigear.com}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC14()[pri:0, instance:railway.BookingTest@523884b2]" name="TC14" duration-ms="3144" started-at="2021-01-22T17:17:35 ICT" finished-at="2021-01-22T17:17:38 ICT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC14 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.BookingTest@523884b2]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-01-22T17:17:39 ICT" finished-at="2021-01-22T17:17:39 ICT">
+        </test-method> <!-- TC04 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC04_ContactEmailContainsCorrectHref@31ef45e3]" name="afterClass" is-config="true" duration-ms="1408" started-at="2021-02-01T14:36:30 ICT" finished-at="2021-02-01T14:36:32 ICT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- railway.BookingTest -->
-    </test> <!-- SeleniumLevel1 -->
+      </class> <!-- railway.TC04_ContactEmailContainsCorrectHref -->
+      <class name="railway.TC15_GotoBookTicketPageFromTicketPricePage">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC15_GotoBookTicketPageFromTicketPricePage@589838eb]" name="beforeClass" is-config="true" duration-ms="7213" started-at="2021-02-01T14:38:15 ICT" finished-at="2021-02-01T14:38:22 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC15(java.util.Hashtable)[pri:0, instance:railway.TC15_GotoBookTicketPageFromTicketPricePage@589838eb]" name="TC15" duration-ms="5455" started-at="2021-02-01T14:38:22 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:38:28 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{departStation=Đà Nẵng, arriveStation=Quảng Ngãi, seatType=Soft seat with air conditioner}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC15 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC15_GotoBookTicketPageFromTicketPricePage@589838eb]" name="afterClass" is-config="true" duration-ms="1515" started-at="2021-02-01T14:38:28 ICT" finished-at="2021-02-01T14:38:29 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC15_GotoBookTicketPageFromTicketPricePage -->
+      <class name="railway.TC10_ResetPasswordWithIncorrectEmail">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC10_ResetPasswordWithIncorrectEmail@553f17c]" name="beforeClass" is-config="true" duration-ms="8942" started-at="2021-02-01T14:37:28 ICT" finished-at="2021-02-01T14:37:37 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC10(java.util.Hashtable)[pri:0, instance:railway.TC10_ResetPasswordWithIncorrectEmail@553f17c]" name="TC10" duration-ms="2878" started-at="2021-02-01T14:37:37 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:37:40 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{expectedMessage=This email address doesn't exist.}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC10 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC10_ResetPasswordWithIncorrectEmail@553f17c]" name="afterClass" is-config="true" duration-ms="1464" started-at="2021-02-01T14:37:40 ICT" finished-at="2021-02-01T14:37:42 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC10_ResetPasswordWithIncorrectEmail -->
+      <class name="railway.TC01_LoginWithValidAccount">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC01_LoginWithValidAccount@239963d8]" name="beforeClass" is-config="true" duration-ms="10553" started-at="2021-02-01T14:35:45 ICT" finished-at="2021-02-01T14:35:55 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC01()[pri:0, instance:railway.TC01_LoginWithValidAccount@239963d8]" name="TC01" duration-ms="2893" started-at="2021-02-01T14:35:55 ICT" finished-at="2021-02-01T14:35:58 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC01_LoginWithValidAccount@239963d8]" name="afterClass" is-config="true" duration-ms="1525" started-at="2021-02-01T14:35:58 ICT" finished-at="2021-02-01T14:36:00 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC01_LoginWithValidAccount -->
+      <class name="railway.TC16_CancelTicket">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC16_CancelTicket@42dafa95]" name="beforeClass" is-config="true" duration-ms="7130" started-at="2021-02-01T14:38:29 ICT" finished-at="2021-02-01T14:38:36 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:railway.TC16_CancelTicket@42dafa95]" name="beforeMethod" is-config="true" duration-ms="2743" started-at="2021-02-01T14:38:36 ICT" finished-at="2021-02-01T14:38:39 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="TC16(java.util.Hashtable)[pri:0, instance:railway.TC16_CancelTicket@42dafa95]" name="TC16" duration-ms="8312" started-at="2021-02-01T14:38:39 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:38:48 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{departStation=Quảng Ngãi, ticketAmount=1, departDate=2/13/2021, arriveStation=Huế, seatType=Soft bed}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC16 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC16_CancelTicket@42dafa95]" name="afterClass" is-config="true" duration-ms="1409" started-at="2021-02-01T14:38:48 ICT" finished-at="2021-02-01T14:38:49 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC16_CancelTicket -->
+      <class name="railway.TC11_CreateAcountWithBlankPwdAndPID">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC11_CreateAcountWithBlankPwdAndPID@4f7d0008]" name="beforeClass" is-config="true" duration-ms="7039" started-at="2021-02-01T14:37:42 ICT" finished-at="2021-02-01T14:37:49 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC11(java.util.Hashtable)[pri:0, instance:railway.TC11_CreateAcountWithBlankPwdAndPID@4f7d0008]" name="TC11" duration-ms="2595" started-at="2021-02-01T14:37:49 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:37:51 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{expectedRegisterMessage=There're errors in the form. Please correct the errors and try again., expectedPasswordMessage=Invalid password length, expectedPIDMessage=Invalid ID length}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC11 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC11_CreateAcountWithBlankPwdAndPID@4f7d0008]" name="afterClass" is-config="true" duration-ms="1509" started-at="2021-02-01T14:37:51 ICT" finished-at="2021-02-01T14:37:53 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC11_CreateAcountWithBlankPwdAndPID -->
+      <class name="railway.TC07_CreateAcountWithValidData">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC07_CreateAcountWithValidData@14bf9759]" name="beforeClass" is-config="true" duration-ms="8646" started-at="2021-02-01T14:37:01 ICT" finished-at="2021-02-01T14:37:10 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC07(java.util.Hashtable)[pri:0, instance:railway.TC07_CreateAcountWithValidData@14bf9759]" name="TC07" duration-ms="2892" started-at="2021-02-01T14:37:10 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:37:13 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{expectedMessage=Registration Confirmed! You can now log in to the site.}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC07 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC07_CreateAcountWithValidData@14bf9759]" name="afterClass" is-config="true" duration-ms="1486" started-at="2021-02-01T14:37:13 ICT" finished-at="2021-02-01T14:37:14 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC07_CreateAcountWithValidData -->
+      <class name="railway.TC05_LoginSeveralTimeWithWrongPassword">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC05_LoginSeveralTimeWithWrongPassword@598067a5]" name="beforeClass" is-config="true" duration-ms="7165" started-at="2021-02-01T14:36:32 ICT" finished-at="2021-02-01T14:36:39 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="TC05(java.util.Hashtable)[pri:0, instance:railway.TC05_LoginSeveralTimeWithWrongPassword@598067a5]" name="TC05" duration-ms="5711" started-at="2021-02-01T14:36:39 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:36:45 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{expectedMessage=You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at railway.TC05_LoginSeveralTimeWithWrongPassword.TC05(TC05_LoginSeveralTimeWithWrongPassword.java:27)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC05_LoginSeveralTimeWithWrongPassword@598067a5]" name="afterClass" is-config="true" duration-ms="1547" started-at="2021-02-01T14:36:45 ICT" finished-at="2021-02-01T14:36:46 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC05_LoginSeveralTimeWithWrongPassword -->
+      <class name="railway.TC08_LoginWithAnUnactivedAccount">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC08_LoginWithAnUnactivedAccount@5f341870]" name="beforeClass" is-config="true" duration-ms="7218" started-at="2021-02-01T14:37:14 ICT" finished-at="2021-02-01T14:37:22 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="TC08(java.util.Hashtable)[pri:0, instance:railway.TC08_LoginWithAnUnactivedAccount@5f341870]" name="TC08" duration-ms="5335" started-at="2021-02-01T14:37:22 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:37:27 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{expectedMessage=Invalid username or password. Please try again.}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error message is not displayed expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Error message is not displayed expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at railway.TC08_LoginWithAnUnactivedAccount.TC08(TC08_LoginWithAnUnactivedAccount.java:34)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC08 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC08_LoginWithAnUnactivedAccount@5f341870]" name="afterClass" is-config="true" duration-ms="1399" started-at="2021-02-01T14:37:27 ICT" finished-at="2021-02-01T14:37:28 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC08_LoginWithAnUnactivedAccount -->
+      <class name="railway.TC06_AdditionalPagesDisplayAfterLogin">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC06_AdditionalPagesDisplayAfterLogin@3c0ecd4b]" name="beforeClass" is-config="true" duration-ms="11141" started-at="2021-02-01T14:36:46 ICT" finished-at="2021-02-01T14:36:57 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC06()[pri:0, instance:railway.TC06_AdditionalPagesDisplayAfterLogin@3c0ecd4b]" name="TC06" duration-ms="2716" started-at="2021-02-01T14:36:57 ICT" finished-at="2021-02-01T14:37:00 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC06_AdditionalPagesDisplayAfterLogin@3c0ecd4b]" name="afterClass" is-config="true" duration-ms="1493" started-at="2021-02-01T14:37:00 ICT" finished-at="2021-02-01T14:37:01 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC06_AdditionalPagesDisplayAfterLogin -->
+      <class name="railway.TC02_LoginWithBlankUsername">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC02_LoginWithBlankUsername@3abbfa04]" name="beforeClass" is-config="true" duration-ms="7620" started-at="2021-02-01T14:36:00 ICT" finished-at="2021-02-01T14:36:07 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC02(java.util.Hashtable)[pri:0, instance:railway.TC02_LoginWithBlankUsername@3abbfa04]" name="TC02" duration-ms="2134" started-at="2021-02-01T14:36:07 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:36:10 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{expectedMessage=There was a problem with your login and/or errors exist in your form.}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC02_LoginWithBlankUsername@3abbfa04]" name="afterClass" is-config="true" duration-ms="1376" started-at="2021-02-01T14:36:10 ICT" finished-at="2021-02-01T14:36:11 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC02_LoginWithBlankUsername -->
+      <class name="railway.TC03_LoginWithInvalidPassword">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC03_LoginWithInvalidPassword@57fffcd7]" name="beforeClass" is-config="true" duration-ms="7106" started-at="2021-02-01T14:36:11 ICT" finished-at="2021-02-01T14:36:18 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC03(java.util.Hashtable)[pri:0, instance:railway.TC03_LoginWithInvalidPassword@57fffcd7]" name="TC03" duration-ms="2209" started-at="2021-02-01T14:36:18 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:36:20 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{expectedMessage=Invalid username or password. Please try again.}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC03_LoginWithInvalidPassword@57fffcd7]" name="afterClass" is-config="true" duration-ms="1364" started-at="2021-02-01T14:36:20 ICT" finished-at="2021-02-01T14:36:22 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC03_LoginWithInvalidPassword -->
+      <class name="railway.TC14_BookMore10Ticket">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:railway.TC14_BookMore10Ticket@271053e1]" name="beforeClass" is-config="true" duration-ms="7058" started-at="2021-02-01T14:37:53 ICT" finished-at="2021-02-01T14:38:00 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:railway.TC14_BookMore10Ticket@271053e1]" name="beforeMethod" is-config="true" duration-ms="2939" started-at="2021-02-01T14:38:00 ICT" finished-at="2021-02-01T14:38:03 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="TC14(java.util.Hashtable)[pri:0, instance:railway.TC14_BookMore10Ticket@271053e1]" name="TC14" duration-ms="10796" started-at="2021-02-01T14:38:03 ICT" data-provider="getDataObjects" finished-at="2021-02-01T14:38:14 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{departStation=Huế, expectedTicketAmountMessage=You have booked 10 tickets. You can book no more., expectedBookingMessage=There're errors in the form. Please correct the errors and try again., ticketAmount=1, departDate=2/13/2021, arriveStation=Nha Trang, seatType=Soft seat}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC14 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:railway.TC14_BookMore10Ticket@271053e1]" name="afterClass" is-config="true" duration-ms="1481" started-at="2021-02-01T14:38:14 ICT" finished-at="2021-02-01T14:38:15 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- railway.TC14_BookMore10Ticket -->
+    </test> <!-- Selenium_level1 -->
   </suite> <!-- Default Suite -->
 </testng-results>
