@@ -2,6 +2,7 @@ package railway;
 
 import common.CommonActions;
 import constant.Constant;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import testbase.TestBase;
 
@@ -9,7 +10,7 @@ public class TC01_LoginWithValidAccount extends TestBase {
     private final HomePage homePage = new HomePage();
     private final LoginPage loginPage = new LoginPage();
 
-    @Test
+    @Test()
     public void TC01() {
         System.out.println("TC01 - User can log into Railway with valid username and password");
 
@@ -21,6 +22,6 @@ public class TC01_LoginWithValidAccount extends TestBase {
 
         System.out.println("Check the welcome message displays.");
         String expectedMsg = "Welcome " + Constant.USERNAME;
-        CommonActions.checkMessageDisplays(homePage.lblWelcomeMessage, expectedMsg);
+        Assert.assertEquals(homePage.getLblWelcomeMessage().getText(),expectedMsg);
     }
 }

@@ -1,37 +1,41 @@
 package railway;
 
 import common.CommonActions;
+import common.Utilities;
+import constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends GeneralPage {
 
     //Locators
-    protected final By _txtUsername = By.id("username");
-    protected final By _txtPassword = By.id("password");
-    protected final By _btnLogin = By.xpath("//input[@value='Login']");
-    protected final By _lblLoginErrorMsg = By.xpath("//p[@class='message error LoginForm']");
-    protected final By _linkForgotPassword = By.xpath("//a[@href='/Account/ForgotPassword.cshtml']");
+    protected final By txtUsername = By.id("username");
+    protected final By txtPassword = By.id("password");
+    protected final By btnLogin = By.xpath("//input[@value='Login']");
+    protected final By lblLoginErrorMsg = By.xpath("//p[@class='message error LoginForm']");
+    protected final By linkForgotPassword = By.xpath("//a[@href='/Account/ForgotPassword.cshtml']");
 
     //Elements
     protected WebElement getTxtUsername() {
-        return CommonActions.getElement(_txtUsername);
+        return this.getElement(txtUsername);
     }
 
     protected WebElement getTxtPassword() {
-        return CommonActions.getElement(_txtPassword);
+        return this.getElement(txtPassword);
     }
 
     protected WebElement getBtnLogin() {
-        return CommonActions.getElement(_btnLogin);
+        return this.getElement(btnLogin);
     }
 
     protected WebElement getErrorMsg() {
-        return CommonActions.getElement(_lblLoginErrorMsg);
+        return this.getElement(lblLoginErrorMsg);
     }
 
     protected WebElement getLinkForgotPassword() {
-        return CommonActions.getElement(_linkForgotPassword);
+        return this.getElement(linkForgotPassword);
     }
 
     //Element methods
@@ -41,10 +45,11 @@ public class LoginPage extends GeneralPage {
 
     //Methods
     public void login(String username, String password) {
-        CommonActions.enterDataToTextbox(getTxtUsername(), username);
-        CommonActions.enterDataToTextbox(getTxtPassword(), password);
-        getBtnLogin().submit();
+        enterDataToTextbox(getTxtUsername(), username);
+        enterDataToTextbox(getTxtPassword(), password);
+        clickOnElement(getBtnLogin());
     }
+
     public void loginMutipleTimes(String username, String password,int times) {
         while (times>0)
         {

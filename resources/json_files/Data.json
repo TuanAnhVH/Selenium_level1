@@ -1,0 +1,49 @@
+{
+  "TC02_LoginWithBlankUsername": [{
+    "expectedMessage": "There was a problem with your login and/or errors exist in your form."
+  }],
+  "TC03_LoginWithInvalidPassword": [{
+    "expectedMessage": "Invalid username or password. Please try again."
+  }],
+  "TC04_ContactEmailContainsCorrectHref": [{
+    "expectedHref": "mailto:thanh.viet.le@logigear.com"
+  }],
+  "TC05_LoginSeveralTimeWithWrongPassword": [{
+    "expectedMessage": "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes."
+  }],
+  "TC07_CreateAcountWithValidData": [{
+    "expectedMessage": "Registration Confirmed! You can now log in to the site."
+  }],
+  "TC08_LoginWithAnUnactivedAccount": [{
+    "expectedMessage": "Invalid username or password. Please try again."
+  }],
+  "TC10_ResetPasswordWithIncorrectEmail": [{
+    "expectedMessage": "This email address doesn't exist."
+  }],
+  "TC11_CreateAcountWithBlankPwdAndPID": [{
+    "expectedRegisterMessage": "There're errors in the form. Please correct the errors and try again.",
+    "expectedPasswordMessage": "Invalid password length",
+    "expectedPIDMessage": "Invalid ID length"
+  }],
+  "TC14_BookMore10Ticket": [{
+    "departDate": "2/13/2021",
+    "departStation": "Huế",
+    "arriveStation": "Nha Trang",
+    "seatType": "Soft seat",
+    "ticketAmount": "1",
+    "expectedBookingMessage": "There're errors in the form. Please correct the errors and try again.",
+    "expectedTicketAmountMessage": "You have booked 10 tickets. You can book no more."
+  }],
+  "TC15_GotoBookTicketPageFromTicketPricePage": [{
+    "departStation": "Đà Nẵng",
+    "arriveStation": "Quảng Ngãi",
+    "seatType": "Soft seat with air conditioner"
+  }],
+  "TC16_CancelTicket": [{
+    "departDate": "2/13/2021",
+    "departStation": "Quảng Ngãi",
+    "arriveStation": "Huế",
+    "seatType": "Soft bed",
+    "ticketAmount": "1"
+  }]
+}

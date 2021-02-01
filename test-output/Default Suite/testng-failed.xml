@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
-  <test thread-count="5" name="SeleniumLevel1(failed)">
+  <test thread-count="5" name="Selenium_level1(failed)">
     <classes>
-      <class name="railway.BookingTest">
+      <class name="railway.TC08_LoginWithAnUnactivedAccount">
         <methods>
-          <include name="TC14"/>
           <include name="beforeClass"/>
-          <include name="beforeMethod"/>
           <include name="afterClass"/>
+          <include name="TC08" invocation-numbers="0"/>
         </methods>
-      </class> <!-- railway.BookingTest -->
+      </class> <!-- railway.TC08_LoginWithAnUnactivedAccount -->
+      <class name="railway.TC05_LoginSeveralTimeWithWrongPassword">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="TC05" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- railway.TC05_LoginSeveralTimeWithWrongPassword -->
     </classes>
-  </test> <!-- SeleniumLevel1(failed) -->
+  </test> <!-- Selenium_level1(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

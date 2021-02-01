@@ -1,60 +1,74 @@
 package railway;
 
+
 import common.CommonActions;
+import constant.Constant;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class BookTicketPage extends GeneralPage {
 
-    public final By _cbbDepartDate = By.name("Date");
-    public final By _cbbDepartFrom = By.name("DepartStation");
-    public final By _cbbArriveAT = By.name("ArriveStation");
-    public final By _cbbSeatType = By.name("SeatType");
-    public final By _cbbTicketAmount = By.name("TicketAmount");
-    public final By _btnBookTicket = By.xpath("//input[@value='Book ticket']");
-    public final By _lblBookingError = By.xpath("//p[@class='message error']");
-    public final By _lblTicketAmountError = By.xpath("//select[@name='TicketAmount']//following-sibling::label");
+    protected final By lblBookingError = By.xpath("//p[@class='message error']");
+    protected final By lblTicketAmountError = By.xpath("//select[@name='TicketAmount']//following-sibling::label");
+    protected final By cbbDepartDate = By.name("Date");
+    protected final By cbbDepartStation = By.name("DepartStation");
+    protected final By cbbArriveStation = By.name("ArriveStation");
+    protected final By cbbSeatType = By.name("SeatType");
+    protected final By cbbTicketAmount = By.name("TicketAmount");
+    protected final By btnBookTicket = By.xpath("//input[@value='Book ticket']");
 
     //Elements
-    public Select getCbbDepartDate() {
-        return  new Select(CommonActions.getElement(_cbbDepartDate));
+    protected Select getCbbDepartDate() {
+        return new Select(CommonActions.getElement(cbbDepartDate));
     }
 
-    public Select getCbbDepartFrom() {
-        return new Select(CommonActions.getElement(_cbbDepartFrom));
+    protected Select getCbbDepartStation() {
+        return new Select(CommonActions.getElement(cbbDepartStation));
     }
 
-    public Select getCbbArriveAT() {
-        return new Select(CommonActions.getElement(_cbbArriveAT));
-    }
+    protected Select getCbbArriveStation() { return new Select(CommonActions.getElement(cbbArriveStation)); }
 
-    public Select getCbbSeatType() { return new Select(CommonActions.getElement(_cbbSeatType));
+    protected Select getCbbSeatType() {
+        return new Select(CommonActions.getElement(cbbSeatType));
     }
 
     protected Select getCbbTicketAmount() {
-        return new Select(CommonActions.getElement(_cbbTicketAmount));
+        return new Select(CommonActions.getElement(cbbTicketAmount));
     }
 
     protected WebElement getBtnBookTicket() {
-        return CommonActions.getElement(_btnBookTicket);
+        return this.getElement(btnBookTicket);
+    }
+
+    protected WebElement getLblBookingError() {
+        return this.getElement(lblBookingError);
+    }
+
+    protected WebElement getLblTicketAmountError() {
+        return this.getElement(lblTicketAmountError);
     }
 
     //methods
-     public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, int ticketAmount){
-        getCbbDepartDate().selectByVisibleText(departDate);
-        getCbbDepartFrom().selectByVisibleText(departStation);
-        getCbbSeatType().selectByVisibleText(seatType);
-        getCbbTicketAmount().selectByValue(ticketAmount+"");
-        getCbbArriveAT().selectByVisibleText(arriveStation);
-        getBtnBookTicket().click();
-     }
-
-     public String getSelectedItem(String selectName){
-        String path = String.format("//select[@name='%s']//option[@selected='selected']",selectName);
+    public String getSelectedItem(String selectName) {
+        String path = String.format("//select[@name='%s']//option[@selected='selected']", selectName);
         By selectedItem = By.xpath(path);
-        return CommonActions.getElement(selectedItem).getText();
-     }
+        return this.getElement(selectedItem).getText();
+    }
 
+    public void selectItem(Select sellect, String itemName){
+        ((JavascriptExecutor) Constant.WEBDRIVER).executeScript("arguments[0].scrollIntoView(true);", sellect);
+        sellect.selectByVisibleText(itemName);
+    }
+
+    public void bookTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
+        selectItem(getCbbDepartDate(),departDate);
+        selectItem(getCbbDepartStation(),departStation);
+        selectItem(getCbbSeatType(),seatType);
+        selectItem(getCbbTicketAmount(),ticketAmount);
+        waiForControlClickable(cbbArriveStation);
+        selectItem(getCbbArriveStation(),arriveStation);
+        clickOnElement(getBtnBookTicket());
+    }
 }

@@ -2,43 +2,60 @@ package railway;
 
 import common.CommonActions;
 import constant.Constant;
-import testbase.DataProviders;
-import objects.Ticket;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import testbase.TestBase;
 
+import java.util.Hashtable;
+
 public class TC14_BookMore10Ticket extends TestBase {
+    RegisterPage registerPage = new RegisterPage();
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     BookTicketPage bookTicketPage = new BookTicketPage();
+    String email, password;
 
-    @Test(dataProvider = "getData",dataProviderClass = DataProviders.class)
-    public void TC14(Ticket ticket) {
+    @BeforeMethod
+    public void beforeMethod() {
+        System.out.println("Go to 'Register' page.");
+        homePage.gotoRegisterPage();
+
+        System.out.println("Create a new account");
+        email = CommonActions.getRandomEmail();
+        password = Constant.PASSWORD;
+        registerPage.register(email, password, password, Constant.PID);
+    }
+
+    @Test(dataProvider = "getDataObjects")
+    public void TC14(Hashtable<String, String> data) {
         System.out.println("TC14 - User can't book more than 10 tickets");
+        SoftAssert softAssert = new SoftAssert();
 
         System.out.println("Go to 'Login' page.");
         homePage.gotoLoginPage();
 
         System.out.println("Login with a valid account.");
-        loginPage.login(Constant.USERNAME,Constant.PASSWORD);
+        loginPage.login(email, password);
 
         System.out.println("Go to the 'Book ticket' page.");
         homePage.gotoBookTicketPage();
 
         System.out.println("Book 10 tickets.");
-        bookTicketPage.bookTicket(ticket.departDate,ticket.departStation, ticket.arriveStation, ticket.seatType, 10);
-
-        homePage.gotoBookTicketPage();
+        bookTicketPage.bookTicket(data.get("departDate"), data.get("departStation"), data.get("arriveStation"), data.get("seatType"), "10");
 
         System.out.println("Book more tickets.");
-        bookTicketPage.bookTicket(ticket.departDate,ticket.departStation, ticket.arriveStation, ticket.seatType, ticket.ticketAmount);
+        homePage.gotoBookTicketPage();
+        bookTicketPage.bookTicket(data.get("departDate"), data.get("departStation"), data.get("arriveStation"), data.get("seatType"), data.get("ticketAmount"));
 
         System.out.println("Check the Book ticket message displays.");
-        String expectedMsg = "There're errors in the form. Please correct the errors and try again.";
-        CommonActions.checkMessageDisplays(bookTicketPage._lblBookingError,expectedMsg);
+        softAssert.assertEquals(bookTicketPage.getLblBookingError().getText(),data.get("expectedBookingMessage"));
 
         System.out.println("Check the 'Amount ticket' message displays.");
-        expectedMsg = "You have booked 10 tickets. You can book no more.";
-        CommonActions.checkMessageDisplays(bookTicketPage._lblTicketAmountError,expectedMsg);
+        softAssert.assertEquals(bookTicketPage.getLblTicketAmountError().getText(),data.get("expectedTicketAmountMessage"));
+
+        System.out.println("Report the checking result");
+        softAssert.assertAll();
     }
 }

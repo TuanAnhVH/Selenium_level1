@@ -23,9 +23,9 @@ public class TC06_AdditionalPagesDisplayAfterLogin extends TestBase {
         loginPage.login(Constant.USERNAME, Constant.PASSWORD);
 
         System.out.println("Check additional pages is exist.");
-        softAssert.assertTrue(CommonActions.doesControlExist(homePage.tabMyTicket),"my ticket tab is not displayed");
-        softAssert.assertTrue(CommonActions.doesControlExist(homePage.tabChangePassword),"Change password tab is not displayed");
-        softAssert.assertTrue(CommonActions.doesControlExist(homePage.tabLogout),"Logout tab is not displayed");
+        softAssert.assertTrue(doesControlExist(homePage.tabMyTicket), "my ticket tab is not displayed");
+        softAssert.assertTrue(doesControlExist(homePage.tabChangePassword), "Change password tab is not displayed");
+        softAssert.assertTrue(doesControlExist(homePage.tabLogout), "Logout tab is not displayed");
         softAssert.assertAll();
     }
 }
